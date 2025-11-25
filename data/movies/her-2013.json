@@ -1,0 +1,52 @@
+{
+  "id": "her-2013",
+  "tmdb_id": 152601,
+  "imdb_id": "tt1798709",
+  "title": "Her",
+  "year": 2013,
+  "runtime_minutes": 126,
+  "genres": ["Romance", "Science Fiction", "Drama"],
+  "director": ["Spike Jonze"],
+  "cast": ["Joaquin Phoenix", "Scarlett Johansson", "Amy Adams", "Rooney Mara"],
+  "plot_summary": "A lonely writer develops an unlikely relationship with an operating system designed to meet his every need.",
+  "themes": [
+    {"name": "loneliness", "specificity": "isolation in hyperconnected world", "prominence": "central"},
+    {"name": "love", "specificity": "what constitutes real connection", "prominence": "central"},
+    {"name": "identity", "specificity": "defining self through relationships", "prominence": "secondary"},
+    {"name": "technology", "specificity": "intimacy mediated by tech", "prominence": "secondary"}
+  ],
+  "mood": {
+    "primary": ["tender", "melancholic"],
+    "undertones": ["hopeful", "wistful"],
+    "intensity": "moderate",
+    "emotional_arc": "lonely to connected to transcendent loss"
+  },
+  "visual_style": {
+    "palette": ["warm pastels", "soft light", "cream and coral"],
+    "composition": ["intimate close-ups", "soft focus", "clean futurism"],
+    "influences": ["mid-century modern", "soft sci-fi"],
+    "descriptors": ["warm", "soft", "intimate", "gentle"]
+  },
+  "narrative": {
+    "pacing": "gentle, flowing",
+    "structure": "relationship arc",
+    "tone": "bittersweet romantic",
+    "perspective": "intimate first-person"
+  },
+  "similar_to": [
+    {
+      "target_id": "blade-runner-2049",
+      "relationship_type": "thematic",
+      "explanation": "Both explore love with artificial beings and question authentic connection",
+      "strength": 4,
+      "bidirectional": true
+    },
+    {
+      "target_id": "lost-in-translation",
+      "relationship_type": "mood",
+      "explanation": "Both capture tender loneliness and connection despite isolation",
+      "strength": 4,
+      "bidirectional": true
+    }
+  ]
+}

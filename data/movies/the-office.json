@@ -1,0 +1,49 @@
+{
+  "id": "the-office",
+  "tmdb_id": 2316,
+  "title": "The Office",
+  "year": 2005,
+  "genres": ["Comedy", "Drama"],
+  "director": ["Greg Daniels"],
+  "cast": ["Steve Carell", "John Krasinski", "Jenna Fischer", "Rainn Wilson"],
+  "plot_summary": "A mockumentary on a group of typical office workers at the Scranton, Pennsylvania branch of Dunder Mifflin Paper Company, where a clueless boss constantly creates awkward situations.",
+  "themes": [
+    {"name": "workplace dynamics", "specificity": "finding meaning in mundane work", "prominence": "central"},
+    {"name": "found family", "specificity": "coworkers becoming chosen family", "prominence": "central"},
+    {"name": "ambition vs contentment", "specificity": "dreams deferred in ordinary life", "prominence": "secondary"}
+  ],
+  "mood": {
+    "primary": ["warm", "comedic"],
+    "undertones": ["cringe", "tender"],
+    "intensity": "moderate",
+    "emotional_arc": "awkward humor to genuine heart"
+  },
+  "visual_style": {
+    "palette": ["beige", "fluorescent office lighting", "neutral"],
+    "composition": ["documentary handheld", "talking heads", "mundane spaces"],
+    "influences": ["British Office", "documentary"],
+    "descriptors": ["naturalistic", "intimate", "unglamorous"]
+  },
+  "narrative": {
+    "pacing": "episodic with long arcs",
+    "structure": "mockumentary",
+    "tone": "comedic with emotional depth",
+    "perspective": "ensemble"
+  },
+  "similar_to": [
+    {
+      "target_id": "severance",
+      "relationship_type": "contrast",
+      "explanation": "Both observe workplace dynamics, but The Office finds warmth where Severance finds horror",
+      "strength": 3,
+      "bidirectional": true
+    },
+    {
+      "target_id": "parks-and-recreation",
+      "relationship_type": "audience_overlap",
+      "explanation": "Same creative DNA, similar warmth, workplace comedy with heart",
+      "strength": 5,
+      "bidirectional": true
+    }
+  ]
+}

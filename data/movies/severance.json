@@ -1,0 +1,50 @@
+{
+  "id": "severance",
+  "tmdb_id": 95396,
+  "title": "Severance",
+  "year": 2022,
+  "genres": ["Drama", "Thriller", "Science Fiction"],
+  "director": ["Ben Stiller", "Aoife McArdle"],
+  "cast": ["Adam Scott", "Zach Cherry", "Britt Lower", "John Turturro", "Patricia Arquette"],
+  "plot_summary": "Mark leads a team of office workers whose memories have been surgically divided between their work and personal lives. When a mysterious colleague appears outside of work, it begins a journey to discover the truth about their jobs.",
+  "themes": [
+    {"name": "work-life separation", "specificity": "literal division of self for corporate benefit", "prominence": "central"},
+    {"name": "identity", "specificity": "who are we without our memories", "prominence": "central"},
+    {"name": "corporate control", "specificity": "corporations owning your consciousness", "prominence": "central"},
+    {"name": "grief", "specificity": "using work to escape personal trauma", "prominence": "secondary"}
+  ],
+  "mood": {
+    "primary": ["unsettling", "surreal"],
+    "undertones": ["darkly comedic", "dread"],
+    "intensity": "intense",
+    "emotional_arc": "eerie calm to explosive revelation"
+  },
+  "visual_style": {
+    "palette": ["sterile white", "fluorescent", "institutional green"],
+    "composition": ["symmetrical", "claustrophobic corridors", "retro-futurist"],
+    "influences": ["Kubrick", "70s corporate design", "brutalism"],
+    "descriptors": ["sterile", "uncanny", "precise", "oppressive"]
+  },
+  "narrative": {
+    "pacing": "slow burn with crescendo",
+    "structure": "parallel timelines (innie/outie)",
+    "tone": "satirical thriller",
+    "perspective": "ensemble with primary protagonist"
+  },
+  "similar_to": [
+    {
+      "target_id": "the-office",
+      "relationship_type": "contrast",
+      "explanation": "Both observe workplace dynamics, but Severance makes the horror literal while The Office finds warmth",
+      "strength": 3,
+      "bidirectional": true
+    },
+    {
+      "target_id": "blade-runner-2049",
+      "relationship_type": "thematic",
+      "explanation": "Both explore identity and consciousness in dehumanizing systems",
+      "strength": 4,
+      "bidirectional": true
+    }
+  ]
+}
