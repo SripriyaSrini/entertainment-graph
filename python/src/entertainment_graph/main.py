@@ -14,14 +14,31 @@ from entertainment_graph.routers.query import register_system
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Initialize systems on startup."""
-    # Register Pure Vector (baseline)
-    register_system("pure_vector", PureVectorSystem())
+    import logging
+    logger = logging.getLogger(__name__)
 
-    # Register Graphiti (temporal knowledge graph)
-    register_system("graphiti", GraphitiSystem())
+    # Register Pure Vector (baseline) - always works
+    try:
+        register_system("pure_vector", PureVectorSystem())
+        logger.info("✓ Pure Vector system initialized")
+    except Exception as e:
+        logger.error(f"✗ Pure Vector failed: {e}")
 
-    # Register OpenMemory (hierarchical memory decomposition)
-    register_system("openmemory", OpenMemorySystem())
+    # Register Graphiti (temporal knowledge graph) - needs Neo4j
+    try:
+        register_system("graphiti", GraphitiSystem())
+        logger.info("✓ Graphiti system initialized")
+    except Exception as e:
+        logger.error(f"✗ Graphiti failed: {e}")
+        logger.info("Skipping Graphiti system (Neo4j not configured)")
+
+    # Register OpenMemory (hierarchical memory decomposition) - needs local storage
+    try:
+        register_system("openmemory", OpenMemorySystem())
+        logger.info("✓ OpenMemory system initialized")
+    except Exception as e:
+        logger.error(f"✗ OpenMemory failed: {e}")
+        logger.info("Skipping OpenMemory system (local storage not available)")
 
     yield
 
