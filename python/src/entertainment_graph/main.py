@@ -1,6 +1,5 @@
 """FastAPI application for Entertainment Graph comparison."""
 
-import re
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -53,38 +52,18 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS for frontend - allow all Vercel preview deployments
-def is_allowed_origin(origin: str) -> bool:
-    """Check if origin is allowed."""
-    allowed_patterns = [
-        r"^http://localhost:3000$",
-        r"^http://localhost:5173$",
-        r"^https://entertainment-graph-[a-z0-9]+-sripriya-s-projects\.vercel\.app$",
-    ]
-    return any(re.match(pattern, origin) for pattern in allowed_patterns)
-
-@app.middleware("http")
-async def cors_middleware(request, call_next):
-    """Custom CORS middleware to handle Vercel preview deployments."""
-    origin = request.headers.get("origin")
-
-    response = await call_next(request)
-
-    if origin and is_allowed_origin(origin):
-        response.headers["Access-Control-Allow-Origin"] = origin
-        response.headers["Access-Control-Allow-Credentials"] = "true"
-        response.headers["Access-Control-Allow-Methods"] = "*"
-        response.headers["Access-Control-Allow-Headers"] = "*"
-
-    # Handle preflight requests
-    if request.method == "OPTIONS":
-        if origin and is_allowed_origin(origin):
-            response.headers["Access-Control-Allow-Origin"] = origin
-            response.headers["Access-Control-Allow-Credentials"] = "true"
-            response.headers["Access-Control-Allow-Methods"] = "*"
-            response.headers["Access-Control-Allow-Headers"] = "*"
-
-    return response
+# CORS for frontend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "https://entertainment-graph.vercel.app"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Include routers
 app.include_router(health.router)
