@@ -58,7 +58,8 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",
         "http://localhost:5173",
-        "https://entertainment-graph-et6jc2v6c-sripriya-s-projects.vercel.app"
+        "https://entertainment-graph-et6jc2v6c-sripriya-s-projects.vercel.app",
+        "https://entertainment-graph-6neq6ong8-sripriya-s-projects.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
